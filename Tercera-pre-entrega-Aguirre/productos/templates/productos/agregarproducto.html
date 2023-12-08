@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+
+{% block contenido_titulo %} 
+    AGREGAR PRODUCTO
+{% endblock contenido_titulo %}
+
+{% block contenido %}
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Guardar producto</button>
+    </form>
+{% endblock contenido %}
